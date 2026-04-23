@@ -41,8 +41,16 @@ export default function Home() {
       </Helmet>
       {/* Hero Section */}
       <section className="relative min-h-[95vh] flex items-center pt-20 pb-24 overflow-hidden">
-        {/* Modern Background with Overlay */}
-        <div className="absolute inset-0 z-0 bg-cover bg-center" style={{ backgroundImage: `url(${heroBg})` }}>
+        {/* Modern Background with Overlay - Optimized for LCP */}
+        <div className="absolute inset-0 z-0">
+          <img 
+            src={heroBg} 
+            alt="" 
+            className="w-full h-full object-cover"
+            fetchPriority="high"
+            width="1920"
+            height="1080"
+          />
           <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-900/80 to-slate-900/40"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(136,169,78,0.2),transparent_50%)]"></div>
         </div>
@@ -147,7 +155,7 @@ export default function Home() {
         >
           <motion.div variants={itemVariants} className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight text-slate-900">AI-Powered Dental Guidelines from Scientific Societies</h2>
-            <p className="text-slate-500 text-sm italic">Novik is an independent AI assistant and is not affiliated with these organizations.</p>
+            <p className="text-slate-600 text-sm italic">Novik is an independent AI assistant and is not affiliated with these organizations.</p>
           </motion.div>
           
           <motion.div variants={itemVariants} className="overflow-x-auto pb-8">
@@ -217,7 +225,7 @@ export default function Home() {
             ].map((item, i) => (
               <motion.div key={i} variants={itemVariants} className="bg-white p-10 rounded-[2rem] shadow-xl border border-slate-100 flex flex-col items-center text-center">
                 <div className="h-24 mb-6 flex items-center justify-center">
-                  <img src={item.logo} alt={`${item.name} Medical Database - Evidence-Based Dentistry for Clinical Support`} className="h-20 w-auto object-contain" loading="lazy" />
+                  <img src={item.logo} alt={`${item.name} Medical Database - Evidence-Based Dentistry for Clinical Support`} className="h-20 w-auto object-contain" loading="lazy" width="200" height="80" />
                 </div>
                 <h3 className="text-2xl font-bold mb-4 text-slate-900 tracking-tight">{item.name}</h3>
                 <p className="text-slate-600 text-lg leading-relaxed">{item.desc}</p>
@@ -260,7 +268,7 @@ export default function Home() {
             ].map((item, i) => (
               <motion.div key={i} variants={itemVariants} className="flex flex-col items-center text-center">
                 <div className="h-24 mb-6 flex items-center justify-center">
-                  <img src={item.logo} alt={`Recognised by ${item.name} - Excellence in Dental AI Technology`} className="h-20 w-auto object-contain" loading="lazy" />
+                  <img src={item.logo} alt={`Recognised by ${item.name} - Excellence in Dental AI Technology`} className="h-20 w-auto object-contain" loading="lazy" width="200" height="80" />
                 </div>
                 <p className="text-slate-600 text-lg leading-relaxed">{item.desc}</p>
               </motion.div>
@@ -294,7 +302,7 @@ export default function Home() {
                       <CheckCircle2 className="text-primary" size={28} />
                     </div>
                     <div>
-                      <h4 className="text-2xl font-bold mb-3 tracking-tight text-white">{item.title}</h4>
+                      <h3 className="text-2xl font-bold mb-3 tracking-tight text-white">{item.title}</h3>
                       <p className="text-slate-400 text-lg leading-relaxed">{item.desc}</p>
                     </div>
                   </div>
@@ -330,15 +338,15 @@ export default function Home() {
           variants={containerVariants}
           className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8"
         >
-          <motion.div variants={itemVariants} className="bg-primary rounded-[4rem] p-12 md:p-24 text-center text-white relative overflow-hidden shadow-[0_35px_60px_-15px_rgba(136,169,78,0.3)]">
-            <div className="absolute top-0 right-0 -mt-20 -mr-20 w-80 h-80 bg-white/10 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-0 left-0 -mb-20 -ml-20 w-80 h-80 bg-black/10 rounded-full blur-3xl"></div>
+          <motion.div variants={itemVariants} className="bg-primary rounded-[4rem] p-12 md:p-24 text-center text-slate-900 relative overflow-hidden shadow-[0_35px_60px_-15px_rgba(136,169,78,0.3)]">
+            <div className="absolute top-0 right-0 -mt-20 -mr-20 w-80 h-80 bg-white/20 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-0 left-0 -mb-20 -ml-20 w-80 h-80 bg-black/5 rounded-full blur-3xl"></div>
             
-            <h2 className="text-4xl md:text-6xl font-bold mb-10 relative z-10 tracking-tight">Ready to Elevate Your Clinical Practice?</h2>
-            <p className="text-xl md:text-2xl text-white/90 mb-14 max-w-2xl mx-auto relative z-10 leading-relaxed">
+            <h2 className="text-4xl md:text-6xl font-bold mb-10 relative z-10 tracking-tight text-slate-900">Ready to Elevate Your Clinical Practice?</h2>
+            <p className="text-xl md:text-2xl text-slate-800 mb-14 max-w-2xl mx-auto relative z-10 leading-relaxed font-medium">
               Join thousands of dental professionals using Novik to make safer, faster, and smarter decisions.
             </p>
-            <a href="https://app.novik.ai" className="bg-white text-primary hover:bg-slate-50 px-12 py-6 rounded-2xl font-bold text-xl inline-flex items-center gap-3 transition-all hover:scale-105 active:scale-95 shadow-2xl relative z-10 group">
+            <a href="https://app.novik.ai" className="bg-slate-900 text-white hover:bg-slate-800 px-12 py-6 rounded-2xl font-bold text-xl inline-flex items-center gap-3 transition-all hover:scale-105 active:scale-95 shadow-2xl relative z-10 group">
               Get Started Now <ArrowRight size={26} className="group-hover:translate-x-1 transition-transform" />
             </a>
           </motion.div>

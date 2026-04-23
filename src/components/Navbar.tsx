@@ -28,8 +28,8 @@ export default function Navbar() {
     <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? 'glass h-20' : 'bg-white h-24'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
         <div className="flex justify-between items-center h-full">
-          <Link to="/" className="flex items-center gap-2 group h-full" title="Novik AI - Professional Dental Clinical Support">
-            <img src={logo} alt="Novik AI Logo" className="h-full w-auto object-contain" />
+          <Link to="/" className="flex items-center gap-2 group h-full" aria-label="Novik AI Home" title="Novik AI - Professional Dental Clinical Support">
+            <img src={logo} alt="Novik AI Logo" className="h-full w-auto object-contain" width="160" height="60" />
           </Link>
 
           {/* Desktop Nav */}

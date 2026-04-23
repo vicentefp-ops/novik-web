@@ -24,13 +24,27 @@ export default function LogoCarousel() {
         {/* Set 1 */}
         {logos.map((logo, i) => (
           <div key={`set1-${i}`} className="px-5 shrink-0 flex items-center justify-center">
-            <img src={logo} alt={`Logo ${i}`} className="h-16 w-auto object-contain" />
+            <img 
+              src={logo} 
+              alt="Scientific Dental Society Logo" 
+              className="h-16 w-auto object-contain" 
+              width="100" 
+              height="64"
+              loading="lazy"
+            />
           </div>
         ))}
         {/* Set 2 */}
         {logos.map((logo, i) => (
           <div key={`set2-${i}`} className="px-5 shrink-0 flex items-center justify-center">
-            <img src={logo} alt={`Logo ${i}`} className="h-16 w-auto object-contain" />
+            <img 
+              src={logo} 
+              alt="Scientific Dental Society Logo" 
+              className="h-16 w-auto object-contain" 
+              width="100" 
+              height="64"
+              loading="lazy"
+            />
           </div>
         ))}
       </motion.div>
