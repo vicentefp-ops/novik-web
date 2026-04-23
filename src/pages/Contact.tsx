@@ -1,4 +1,5 @@
 import { motion } from 'motion/react';
+import { Helmet } from 'react-helmet-async';
 import { Mail, MessageSquare, Users, Code, HelpCircle, MessageCircle } from 'lucide-react';
 
 export default function Contact() {
@@ -22,6 +23,10 @@ export default function Contact() {
       variants={containerVariants}
       className="max-w-6xl mx-auto px-4 py-20"
     >
+      <Helmet>
+        <title>Contact Us – Get in Touch with Novik AI Team</title>
+        <meta name="description" content="Have questions or feedback about Novik AI? Contact our team for clinical support, partnerships, or API inquiries." />
+      </Helmet>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
         {/* Left Column */}
         <div className="space-y-8">

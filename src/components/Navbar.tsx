@@ -28,8 +28,8 @@ export default function Navbar() {
     <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? 'glass h-20' : 'bg-white h-24'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
         <div className="flex justify-between items-center h-full">
-          <Link to="/" className="flex items-center gap-2 group h-full">
-            <img src={logo} alt="Novik Logo" className="h-full w-auto object-contain" />
+          <Link to="/" className="flex items-center gap-2 group h-full" title="Novik AI - Professional Dental Clinical Support">
+            <img src={logo} alt="Novik AI Logo" className="h-full w-auto object-contain" />
           </Link>
 
           {/* Desktop Nav */}
@@ -52,7 +52,11 @@ export default function Navbar() {
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
-            <button onClick={() => setIsOpen(!isOpen)} className="text-slate-600 p-2">
+            <button 
+              onClick={() => setIsOpen(!isOpen)} 
+              className="text-slate-600 p-2"
+              aria-label={isOpen ? "Close menu" : "Open menu"}
+            >
               {isOpen ? <X /> : <Menu />}
             </button>
           </div>

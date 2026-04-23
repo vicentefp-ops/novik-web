@@ -1,4 +1,5 @@
 import { motion } from 'motion/react';
+import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Zap, BookOpen, AlertCircle, Clock, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import LogoCarousel from '../components/LogoCarousel';
@@ -34,6 +35,10 @@ export default function Home() {
       variants={containerVariants}
       className="overflow-hidden"
     >
+      <Helmet>
+        <title>Novik AI – Clinical Excellence in Dentistry Powered by Artificial Intelligence</title>
+        <meta name="description" content="Novik AI is the leading clinical decision assistant for dentists. Use AI to analyze complex cases, drug interactions, and treatment plans with medical evidence." />
+      </Helmet>
       {/* Hero Section */}
       <section className="relative min-h-[95vh] flex items-center pt-20 pb-24 overflow-hidden">
         {/* Modern Background with Overlay */}
@@ -59,8 +64,8 @@ export default function Home() {
               variants={itemVariants} 
               className="text-5xl md:text-8xl font-bold text-white mb-8 leading-[1.05] tracking-tight"
             >
-              Clinical Excellence in Dentistry <br />
-              <span className="text-primary">Powered by AI</span>
+              Novik AI: Clinical Excellence in Dentistry <br />
+              <span className="text-primary">Powered by Artificial Intelligence</span>
             </motion.h1>
             
             <motion.p 
@@ -91,9 +96,9 @@ export default function Home() {
           className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
         >
           <motion.div variants={itemVariants} className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight text-slate-900">The Problem We Solve</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight text-slate-900">Solving Complex Dental Treatment Planning</h2>
             <p className="text-slate-600 max-w-2xl mx-auto text-lg leading-relaxed">
-              Complex medical histories and limited time make treatment planning risky. Novik simplifies this process.
+              Complex medical histories and limited time make treatment planning risky. Novik is the dental AI assistant that simplifies this process.
             </p>
           </motion.div>
 
@@ -141,8 +146,8 @@ export default function Home() {
           className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
         >
           <motion.div variants={itemVariants} className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight text-slate-900">Based on clinical guidelines from leading scientific societies.</h2>
-            <p className="text-slate-500 text-sm italic">Novik is not affiliated with or endorsed by these organizations.</p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight text-slate-900">AI-Powered Dental Guidelines from Scientific Societies</h2>
+            <p className="text-slate-500 text-sm italic">Novik is an independent AI assistant and is not affiliated with these organizations.</p>
           </motion.div>
           
           <motion.div variants={itemVariants} className="overflow-x-auto pb-8">
@@ -212,7 +217,7 @@ export default function Home() {
             ].map((item, i) => (
               <motion.div key={i} variants={itemVariants} className="bg-white p-10 rounded-[2rem] shadow-xl border border-slate-100 flex flex-col items-center text-center">
                 <div className="h-24 mb-6 flex items-center justify-center">
-                  <img src={item.logo} alt={`${item.name} Logo`} className="h-20 w-auto object-contain" />
+                  <img src={item.logo} alt={`${item.name} Medical Database - Evidence-Based Dentistry for Clinical Support`} className="h-20 w-auto object-contain" loading="lazy" />
                 </div>
                 <h3 className="text-2xl font-bold mb-4 text-slate-900 tracking-tight">{item.name}</h3>
                 <p className="text-slate-600 text-lg leading-relaxed">{item.desc}</p>
@@ -255,7 +260,7 @@ export default function Home() {
             ].map((item, i) => (
               <motion.div key={i} variants={itemVariants} className="flex flex-col items-center text-center">
                 <div className="h-24 mb-6 flex items-center justify-center">
-                  <img src={item.logo} alt={`${item.name} Logo`} className="h-20 w-auto object-contain" />
+                  <img src={item.logo} alt={`Recognised by ${item.name} - Excellence in Dental AI Technology`} className="h-20 w-auto object-contain" loading="lazy" />
                 </div>
                 <p className="text-slate-600 text-lg leading-relaxed">{item.desc}</p>
               </motion.div>
@@ -303,8 +308,9 @@ export default function Home() {
               <div className="glass p-4 rounded-[3rem] border-white/10 shadow-2xl">
                 <img 
                   src={aiAnalysis} 
-                  alt="AI Analysis" 
+                  alt="Novik Dental AI Analysis Interface - Clinical Decision Support" 
                   className="rounded-[2.5rem] w-full shadow-inner"
+                  loading="lazy"
                 />
               </div>
               {/* Decorative elements */}

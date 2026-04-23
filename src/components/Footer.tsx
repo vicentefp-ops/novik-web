@@ -46,16 +46,16 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-semibold mb-6">Follow Us</h4>
             <div className="flex gap-4">
-              <a href="https://wa.me/34690957910" target="_blank" rel="noopener noreferrer" className="bg-slate-800 p-2.5 rounded-full hover:bg-green-500 hover:text-white transition-all">
+              <a href="https://wa.me/34690957910" target="_blank" rel="noopener noreferrer" className="bg-slate-800 p-2.5 rounded-full hover:bg-green-500 hover:text-white transition-all" aria-label="Contact us via WhatsApp" title="WhatsApp Support">
                 <MessageCircle size={20} />
               </a>
-              <a href="https://facebook.com/dentalnovik" target="_blank" rel="noopener noreferrer" className="bg-slate-800 p-2.5 rounded-full hover:bg-primary hover:text-white transition-all">
+              <a href="https://facebook.com/dentalnovik" target="_blank" rel="noopener noreferrer" className="bg-slate-800 p-2.5 rounded-full hover:bg-primary hover:text-white transition-all" aria-label="Follow Novik AI on Facebook" title="Facebook">
                 <Facebook size={20} />
               </a>
-              <a href="https://instagram.com/dentalnovik" target="_blank" rel="noopener noreferrer" className="bg-slate-800 p-2.5 rounded-full hover:bg-primary hover:text-white transition-all">
+              <a href="https://instagram.com/dentalnovik" target="_blank" rel="noopener noreferrer" className="bg-slate-800 p-2.5 rounded-full hover:bg-primary hover:text-white transition-all" aria-label="Follow Novik AI on Instagram" title="Instagram">
                 <Instagram size={20} />
               </a>
-              <a href="https://www.linkedin.com/company/novik-ai/?viewAsMember=true" target="_blank" rel="noopener noreferrer" className="bg-slate-800 p-2.5 rounded-full hover:bg-primary hover:text-white transition-all">
+              <a href="https://www.linkedin.com/company/novik-ai/?viewAsMember=true" target="_blank" rel="noopener noreferrer" className="bg-slate-800 p-2.5 rounded-full hover:bg-primary hover:text-white transition-all" aria-label="Follow Novik AI on LinkedIn" title="LinkedIn">
                 <Linkedin size={20} />
               </a>
             </div>

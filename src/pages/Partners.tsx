@@ -1,4 +1,5 @@
 import { motion } from 'motion/react';
+import { Helmet } from 'react-helmet-async';
 import { Users, Globe, BarChart3, Mail } from 'lucide-react';
 
 export default function Partners() {
@@ -22,6 +23,10 @@ export default function Partners() {
       variants={containerVariants}
       className="max-w-6xl mx-auto px-4 py-20"
     >
+      <Helmet>
+        <title>Partnership – Grow with the First Specialized Dental AI Platform</title>
+        <meta name="description" content="Join Novik as a partner. Reach a global community of dental professionals and align your brand with innovation in clinical oral healthcare." />
+      </Helmet>
       <motion.div variants={itemVariants} className="text-left mb-16">
         <h2 className="text-primary font-bold tracking-wider uppercase text-sm mb-2">PARTNERSHIP</h2>
         <h1 className="text-5xl font-bold mb-6 text-slate-900">Partner with Novik</h1>
