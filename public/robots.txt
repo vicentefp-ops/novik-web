@@ -1,11 +1,4 @@
 User-agent: *
 Allow: /
-Allow: /login
-Allow: /privacy-notice.html
-Allow: /terms-of-use.html
-Allow: /report/
-Disallow: /patients/
-Disallow: /settings/
-Disallow: /admin/
 
-Sitemap: https://periovox.ai/sitemap.xml
+Sitemap: https://novik.ai/sitemap.xml
