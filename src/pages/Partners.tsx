@@ -23,11 +23,11 @@ export default function Partners() {
       variants={containerVariants}
       className="max-w-6xl mx-auto px-4 py-20"
     >
-      <Helmet>
+      {typeof window !== 'undefined' && <Helmet>
         <title>Partnership – Grow with the First Specialized Dental AI Platform</title>
         <meta name="description" content="Join Novik as a partner. Reach a global community of dental professionals and align your brand with innovation in clinical oral healthcare." />
         <link rel="canonical" href="https://novik.ai/partners" />
-      </Helmet>
+      </Helmet>}
       <motion.div variants={itemVariants} className="text-left mb-16">
         <h1 className="text-5xl font-bold mb-6 text-slate-900">Partner with Novik</h1>
         <h2 className="text-primary font-bold tracking-wider uppercase text-sm mb-4">PARTNERSHIP</h2>
