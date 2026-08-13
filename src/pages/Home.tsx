@@ -38,6 +38,7 @@ export default function Home() {
       <Helmet>
         <title>Novik AI – Clinical Excellence in Dentistry Powered by Artificial Intelligence</title>
         <meta name="description" content="Novik AI is the leading clinical decision assistant for dentists. Use AI to analyze complex cases, drug interactions, and treatment plans with medical evidence." />
+        <link rel="canonical" href="https://novik.ai/" />
       </Helmet>
       {/* Hero Section */}
       <section className="relative min-h-[95vh] flex items-center pt-20 pb-24 overflow-hidden">

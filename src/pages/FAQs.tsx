@@ -53,6 +53,7 @@ export default function FAQs() {
       <Helmet>
         <title>FAQs – Common Questions about Novik AI Dental Assistant</title>
         <meta name="description" content="Find answers to common questions about Novik AI, including security, HIPAA compliance, pricing, and how it clinical excellence can support your practice." />
+        <link rel="canonical" href="https://novik.ai/faqs" />
       </Helmet>
       <motion.div variants={itemVariants} className="text-center mb-16">
         <h1 className="text-4xl font-bold mb-4">Frequently Asked Questions</h1>

@@ -12,6 +12,7 @@ export default function APIPage() {
       <Helmet>
         <title>Dental AI API – Integrate Clinical Intelligence into your Software</title>
         <meta name="description" content="Explore Novik AI API. Embed clinical decision support for medications and anesthetics into your EHR or dental management platform." />
+        <link rel="canonical" href="https://novik.ai/api" />
       </Helmet>
       <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary font-medium text-sm mb-8 mx-auto">
         <Terminal size={16} />
