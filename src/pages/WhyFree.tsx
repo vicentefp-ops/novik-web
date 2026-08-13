@@ -23,11 +23,11 @@ export default function WhyFree() {
       variants={containerVariants}
       className="max-w-4xl mx-auto px-4 py-20"
     >
-      <Helmet>
+      {typeof window !== 'undefined' && <Helmet>
         <title>Why Novik is Free – Our Commitment to Open Clinical AI</title>
         <meta name="description" content="Learn why Novik AI offers free access to our clinical decision support tools. Our mission is to democratize clinical intelligence in dentistry." />
         <link rel="canonical" href="https://novik.ai/why-free" />
-      </Helmet>
+      </Helmet>}
       <motion.div variants={itemVariants} className="text-center mb-16">
         <h1 className="text-4xl font-bold mb-4">Why Novik is Free</h1>
         <p className="text-slate-600 max-w-2xl mx-auto">

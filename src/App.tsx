@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
@@ -18,35 +18,43 @@ import PrivacyPolicy from './pages/PrivacyPolicy';
 import { motion, AnimatePresence } from 'motion/react';
 import { HelmetProvider } from 'react-helmet-async';
 
+export function AppContent() {
+  return (
+    <>
+      <ScrollToTop />
+      <CookieConsent />
+      <div className="min-h-screen flex flex-col">
+        <Navbar />
+        <WhatsAppFAB />
+        <main className="flex-grow pt-16">
+          <AnimatePresence mode="wait">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/faqs" element={<FAQs />} />
+              <Route path="/why-free" element={<WhyFree />} />
+              <Route path="/partners" element={<Partners />} />
+              <Route path="/api" element={<APIPage />} />
+              <Route path="/cookie-policy" element={<CookiePolicy />} />
+              <Route path="/legal-notice" element={<LegalNotice />} />
+              <Route path="/terms-of-use" element={<TermsOfUse />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            </Routes>
+          </AnimatePresence>
+        </main>
+        <Footer />
+      </div>
+    </>
+  );
+}
+
 export default function App() {
   return (
     <HelmetProvider>
-      <Router>
-        <ScrollToTop />
-        <CookieConsent />
-        <div className="min-h-screen flex flex-col">
-          <Navbar />
-          <WhatsAppFAB />
-          <main className="flex-grow pt-16">
-            <AnimatePresence mode="wait">
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/dashboard" element={<Dashboard />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/faqs" element={<FAQs />} />
-                <Route path="/why-free" element={<WhyFree />} />
-                <Route path="/partners" element={<Partners />} />
-                <Route path="/api" element={<APIPage />} />
-                <Route path="/cookie-policy" element={<CookiePolicy />} />
-                <Route path="/legal-notice" element={<LegalNotice />} />
-                <Route path="/terms-of-use" element={<TermsOfUse />} />
-                <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-              </Routes>
-            </AnimatePresence>
-          </main>
-          <Footer />
-        </div>
-      </Router>
+      <BrowserRouter>
+        <AppContent />
+      </BrowserRouter>
     </HelmetProvider>
   );
 }

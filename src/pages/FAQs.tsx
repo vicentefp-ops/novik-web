@@ -50,11 +50,11 @@ export default function FAQs() {
       variants={containerVariants}
       className="max-w-4xl mx-auto px-4 py-20"
     >
-      <Helmet>
+      {typeof window !== 'undefined' && <Helmet>
         <title>FAQs – Common Questions about Novik AI Dental Assistant</title>
         <meta name="description" content="Find answers to common questions about Novik AI, including security, HIPAA compliance, pricing, and how it clinical excellence can support your practice." />
         <link rel="canonical" href="https://novik.ai/faqs" />
-      </Helmet>
+      </Helmet>}
       <motion.div variants={itemVariants} className="text-center mb-16">
         <h1 className="text-4xl font-bold mb-4">Frequently Asked Questions</h1>
         <p className="text-slate-600">Everything you need to know about Novik AI.</p>
