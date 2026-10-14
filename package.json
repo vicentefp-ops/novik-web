@@ -5,10 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite --port=3000 --host=0.0.0.0",
-    "build": "vite build && vite build --ssr scripts/prerender.tsx --outDir .prerender && node .prerender/prerender.js",
+    "build": "node scripts/build-static.mjs",
     "preview": "vite preview",
     "clean": "rm -rf dist",
-    "lint": "tsc --noEmit"
+    "lint": "tsc --noEmit",
+    "build:legacy": "vite build && vite build --ssr scripts/prerender.tsx --outDir .prerender && node .prerender/prerender.js"
   },
   "dependencies": {
     "@google/genai": "^1.29.0",

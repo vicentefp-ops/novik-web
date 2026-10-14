@@ -1,8 +1,135 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "buildCommand": "node scripts/build-static.mjs",
+  "installCommand": "node -e \"console.log('Static site; no dependencies needed')\"",
+  "outputDirectory": "dist",
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/dashboard",
+      "destination": "https://app.novik.ai",
+      "permanent": true
+    },
+    {
+      "source": "/privacy-notice.html",
+      "destination": "/privacy-policy",
+      "permanent": true
+    },
+    {
+      "source": "/terms-of-use.html",
+      "destination": "/terms-of-use",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/",
       "destination": "/index.html"
+    },
+    {
+      "source": "/es",
+      "destination": "/es/index.html"
+    },
+    {
+      "source": "/why-free",
+      "destination": "/why-free/index.html"
+    },
+    {
+      "source": "/partners",
+      "destination": "/partners/index.html"
+    },
+    {
+      "source": "/api",
+      "destination": "/api/index.html"
+    },
+    {
+      "source": "/faqs",
+      "destination": "/faqs/index.html"
+    },
+    {
+      "source": "/contact",
+      "destination": "/contact/index.html"
+    },
+    {
+      "source": "/legal-notice",
+      "destination": "/legal-notice/index.html"
+    },
+    {
+      "source": "/terms-of-use",
+      "destination": "/terms-of-use/index.html"
+    },
+    {
+      "source": "/privacy-policy",
+      "destination": "/privacy-policy/index.html"
+    },
+    {
+      "source": "/cookie-policy",
+      "destination": "/cookie-policy/index.html"
+    },
+    {
+      "source": "/es/why-free",
+      "destination": "/es/why-free/index.html"
+    },
+    {
+      "source": "/es/partners",
+      "destination": "/es/partners/index.html"
+    },
+    {
+      "source": "/es/api",
+      "destination": "/es/api/index.html"
+    },
+    {
+      "source": "/es/faqs",
+      "destination": "/es/faqs/index.html"
+    },
+    {
+      "source": "/es/contact",
+      "destination": "/es/contact/index.html"
+    },
+    {
+      "source": "/es/legal-notice",
+      "destination": "/es/legal-notice/index.html"
+    },
+    {
+      "source": "/es/terms-of-use",
+      "destination": "/es/terms-of-use/index.html"
+    },
+    {
+      "source": "/es/privacy-policy",
+      "destination": "/es/privacy-policy/index.html"
+    },
+    {
+      "source": "/es/cookie-policy",
+      "destination": "/es/cookie-policy/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
+        }
+      ]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, stale-while-revalidate=604800"
+        }
+      ]
     }
   ]
 }

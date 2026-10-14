@@ -1,0 +1,24 @@
+# Novik AI
+
+> Novik is an AI-powered clinical decision-support assistant for dental professionals. It supports review of de-identified medical history, medications and planned dental procedures. Diagnosis, professional judgment and treatment decisions remain with the treating clinician.
+
+## Languages
+- [English](https://novik.ai/)
+- [Español](https://novik.ai/es)
+
+## Product information
+- [How Novik works and evidence sources](https://novik.ai/)
+- [Preguntas frecuentes](https://novik.ai/es/faqs)
+- [FAQs: use, security and pricing](https://novik.ai/faqs)
+- [Open beta and free core functionality](https://novik.ai/why-free)
+- [Partnerships](https://novik.ai/partners)
+- [API: planned integration, not yet available](https://novik.ai/api)
+- [Contact](https://novik.ai/contact)
+
+## Legal and scope
+- [Terms of use](https://novik.ai/terms-of-use)
+- [Privacy policy](https://novik.ai/privacy-policy)
+- [Legal notice](https://novik.ai/legal-notice)
+- [Cookie policy](https://novik.ai/cookie-policy)
+
+Core functionality is free during open beta. No HIPAA certification is claimed. Do not enter patient identifiers. Novik is independent and is not affiliated with the scientific organisations whose logos appear on the website. Public information is available as rendered HTML in English and Spanish. Contact: info@novik.ai.
