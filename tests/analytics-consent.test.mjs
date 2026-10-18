@@ -88,6 +88,9 @@ test('all twenty static pages have distinct metadata, reciprocal languages, real
     assert.equal(doc.documentElement.lang, route.startsWith('/es') ? 'es' : 'en');
     for (const lang of ['es','en']) assert.ok(doc.querySelector('link[hreflang=' + lang + ']'), route);
     assert.equal(doc.querySelectorAll('script[src^="/analytics-consent.js"]').length, 1, route);
+    const languageSelector = doc.head.querySelector('script[src="/language.js?v=1"]');
+    assert.ok(languageSelector, route);
+    assert.equal(languageSelector.hasAttribute('async') || languageSelector.hasAttribute('defer'), false, route);
     assert.equal(doc.querySelectorAll('script[src*=googletagmanager]').length, 0, route);
     dom.window.close();
   }
