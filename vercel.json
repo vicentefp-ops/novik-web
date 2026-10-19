@@ -112,6 +112,38 @@
     {
       "source": "/es/cookie-policy",
       "destination": "/es/cookie-policy/index.html"
+    },
+    {
+      "source": "/es/clinical-topics/polypharmacy",
+      "destination": "/es/clinical-topics/polypharmacy/index.html"
+    },
+    {
+      "source": "/es/clinical-topics/anticoagulants",
+      "destination": "/es/clinical-topics/anticoagulants/index.html"
+    },
+    {
+      "source": "/es/clinical-topics/antiresorptives",
+      "destination": "/es/clinical-topics/antiresorptives/index.html"
+    },
+    {
+      "source": "/clinical-topics/polypharmacy",
+      "destination": "/clinical-topics/polypharmacy/index.html"
+    },
+    {
+      "source": "/clinical-topics/anticoagulants",
+      "destination": "/clinical-topics/anticoagulants/index.html"
+    },
+    {
+      "source": "/clinical-topics/antiresorptives",
+      "destination": "/clinical-topics/antiresorptives/index.html"
+    },
+    {
+      "source": "/es/clinical-topics",
+      "destination": "/es/clinical-topics/index.html"
+    },
+    {
+      "source": "/clinical-topics",
+      "destination": "/clinical-topics/index.html"
     }
   ],
   "headers": [

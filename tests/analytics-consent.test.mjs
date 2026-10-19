@@ -73,7 +73,7 @@ test('withdrawal stops future navigation measurement, clears analytics cookies a
   } finally { dom.window.close(); }
 });
 
-test('all twenty static pages have distinct metadata, reciprocal languages, real H1 and the consent loader', async () => {
+test('all static pages have distinct metadata, reciprocal languages, real H1 and the consent loader', async () => {
   const config = JSON.parse(await readFile(new URL('../vercel.json', import.meta.url), 'utf8'));
   const titles = new Set();
   for (const {source: route, destination} of config.rewrites) {
@@ -94,5 +94,7 @@ test('all twenty static pages have distinct metadata, reciprocal languages, real
     assert.equal(doc.querySelectorAll('script[src*=googletagmanager]').length, 0, route);
     dom.window.close();
   }
-  assert.equal(titles.size, 20);
+  assert.ok(config.rewrites.length > 0);
+  assert.equal(titles.size, config.rewrites.length);
 });
+
