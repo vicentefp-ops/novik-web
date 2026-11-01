@@ -15,6 +15,18 @@
 - [API: planned integration, not yet available](https://novik.ai/api)
 - [Contact](https://novik.ai/contact)
 
+## Clinical topics / Temas clínicos
+Educational information for dental professionals, not individual clinical protocols. Sources and scope are stated on each page; no independent clinical review is claimed.
+
+- [Clinical topics](https://novik.ai/clinical-topics)
+- [Temas clínicos](https://novik.ai/es/clinical-topics)
+- [Polypharmacy and drug interactions in dentistry](https://novik.ai/clinical-topics/polypharmacy)
+- [Polimedicación e interacciones farmacológicas en odontología](https://novik.ai/es/clinical-topics/polypharmacy)
+- [Anticoagulated patients in dentistry](https://novik.ai/clinical-topics/anticoagulants)
+- [Pacientes anticoagulados en odontología](https://novik.ai/es/clinical-topics/anticoagulants)
+- [Bisphosphonates and denosumab in dentistry](https://novik.ai/clinical-topics/antiresorptives)
+- [Bisfosfonatos y denosumab en odontología](https://novik.ai/es/clinical-topics/antiresorptives)
+
 ## Legal and scope
 - [Terms of use](https://novik.ai/terms-of-use)
 - [Privacy policy](https://novik.ai/privacy-policy)
